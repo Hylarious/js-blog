@@ -8,6 +8,7 @@ const titleClickHandler = function(event) {
         activeLink.classList.remove('active');
     }
     // [DONE] add class active to the clicked link
+    event.preventDefault();
     const clickedElement = this;
     clickedElement.classList.add('active');
     // [DONE] remove class active form all articles 
@@ -15,10 +16,12 @@ const titleClickHandler = function(event) {
     for (let activeArticle of activeArticles) {
         activeArticle.classList.remove('active');
     }
-    // [IN PROGRESS] get href atribute from the clicked link 
-
+    // [DONE] get href atribute from the clicked link 
+    const articleSelector = clickedElement.getAttribute('href')
+    console.log(articleSelector);
     // [IN PROGRESS] find the correct article using selector (href)
     // [IN PROGRESS] add class active to the correct article
+
 }
 
 
