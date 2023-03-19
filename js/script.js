@@ -40,7 +40,9 @@ function generateTitleList() {
     console.log('generateTitleList worked!')
         //  remove contents of titleList 
 
-    document.querySelector('ul.titles').innerHTML = "";
+    const titleList = document.querySelector('ul.titles');
+    console.log(titleList)
+    titleList.innerHTML = '';
 
     //  for each articles
     const articles = document.querySelectorAll(optArticleSelector)
@@ -50,16 +52,16 @@ function generateTitleList() {
         //  get the article id 
         const articleId = article.getAttribute('id');
         //  find the title element ;
-        const targetArticle = document.querySelector(articleId)
-            //  get the title from the title element 
-        const articleTitle = article.querySelectorAll(optTitleSelector).innerHTML;
-        // console.log(articleTitle) ZAPYTAĆ
+        //  get the title from the title element 
+        const articleTitle = article.querySelector(optTitleSelector).innerHTML;
         //  create HTML of the link 
+        console.log(article.innerHTML)
         const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
         console.log(linkHTML)
-            //  insert link into titleLis
-        const list = document.querySelector('.list .titles')
-        list.insertAdjacentHTML(linkHTML)
-    }
 
-    generateTitleList()
+        //  insert link into titleLis
+        titleList.innerHTML += linkHTML;
+    }
+}
+
+generateTitleList()
