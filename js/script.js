@@ -2,8 +2,8 @@
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
-  optArticleTagsSelector = '.post-tags .list',
-  optArticleAuthorSelector = '.list.authors';
+  optArticleTagsSelector = '.post-tags .list';
+// optArticleAuthorSelector = '.list.authors';
 
 const titleClickHandler = function(event) {
   console.log('Link was clicked!', event);
