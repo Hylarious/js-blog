@@ -107,6 +107,9 @@ body {
     li {
         margin-bottom: 12px;
     }
+    //  .author.active {
+    //     font-weight: bold;
+    // }
 }
 
 
@@ -127,5 +130,27 @@ body {
     display: flex;
     p {
         margin: 0 10px 0 0;
+    }
+}
+
+.list.tags {
+    text-align: center;
+    li {
+        display: inline-block;
+    }
+    .tag-size1 {
+        font-size: 1em;
+    }
+    .tag-size2 {
+        font-size: 1.2em;
+    }
+    .tag-size3{
+        font-size: 1.4em;
+    }
+    .tag-size4{
+        font-size: 1.6em;
+    }
+    .tag-size5{
+        font-size: 1.8em;
     }
 }
